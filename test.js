@@ -17,5 +17,9 @@ const kaboom = ()=>{
     alert("Links Copied!");
 };
 window.addEventListener("load", (event) => {
-    console.log("page is fully loaded");
+    let parentContainer = document.querySelector("form.d-flex");
+    let elem = document.createElement("button");
+    elem.innerHTML="Get Links";
+    elem.addEventListener('click', kaboom);
+    parentContainer.appendChild(elem);
 });
