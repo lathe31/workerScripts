@@ -16,7 +16,7 @@ const kaboom = ()=>{
     console.log(mpv_string);
     alert("Links Copied!");
 };
-window.addEventListener("load", (event) => {
+window.addEventListener("load", async (event) => {
     let parentContainer = document.querySelector("form.d-flex");
     while (parentContainer==null) {
         console.log("Waiting For Parent Element To Load!");
