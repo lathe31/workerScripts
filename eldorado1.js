@@ -18,6 +18,10 @@ const kaboom = ()=>{
 };
 window.addEventListener("load", (event) => {
     let parentContainer = document.querySelector("form.d-flex");
+    while (parentContainer==null) {
+        await new Promise(r => setTimeout(r, 2000));
+        parentContainer = document.querySelector("form.d-flex");
+    }
     let elem = document.createElement("button");
     elem.innerHTML="Get Links";
     elem.addEventListener('click', kaboom);
