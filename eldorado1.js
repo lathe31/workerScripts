@@ -19,6 +19,7 @@ const kaboom = ()=>{
 window.addEventListener("load", (event) => {
     let parentContainer = document.querySelector("form.d-flex");
     while (parentContainer==null) {
+        console.log("Waiting For Parent Element To Load!");
         await new Promise(r => setTimeout(r, 2000));
         parentContainer = document.querySelector("form.d-flex");
     }
